@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+</div>
+<div>
+  <label class="block text-sm">Rol</label>
+  <select name="rol" class="w-full px-3 py-2 border rounded">
+    <option value="cliente">Cliente</option>
+    <option value="empleado">Empleado</option>
+    <!-- administrador normalmente creado por DBA -->
+  </select>
+</div>
+<button class="bg-green-600 text-white px-4 py-2 rounded">Registrarme</button>
+</form>
+
+
+<!-- Login -->
+<form action="/php/login.php" method="post" class="space-y-4">
+  <h2 class="text-lg font-medium">Iniciar sesión</h2>
+  <div>
+    <label class="block text-sm">Email</label>
+    <input type="email" name="email" required class="w-full px-3 py-2 border rounded" />
+  </div>
+  <div>
+    <label class="block text-sm">Contraseña</label>
+    <input type="password" name="password" required class="w-full px-3 py-2 border rounded" />
+  </div>
+  <button class="bg-blue-600 text-white px-4 py-2 rounded">Entrar</button>
+</form>
+
+
+<!-- Crear reserva (solo clientes) -->
+<form action="/php/crear_reserva.php" method="post" class="space-y-4 md:col-span-2">
+  <h2 class="text-lg font-medium">Crear reservación</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <div>
+      <label class="block text-sm">Origen</label>
+      <input name="origen" required class="w-full px-3 py-2 border rounded" />
+    </div>
+    <div>
+      <label class="block text-sm">Destino</label>
+      <input name="destino" required class="w-full px-3 py-2 border rounded" />
+    </div>
+    <div>
+      <label class="block text-sm">Fecha</label>
+      <input type="date" name="fecha_viaje" required class="w-full px-3 py-2 border rounded" />
+    </div>
+  </div>
+
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <div>
+      <label class="block text-sm">Asientos</label>
+      <input type="number" min="1" name="asientos" value="1" required class="w-full px-3 py-2 border rounded" />
+    </div>
+    <div>
+      <label class="block text-sm">Tipo</label>
+      <select name="tipo_viaje" class="w-full px-3 py-2 border rounded">
+        <option value="terrestre">Terrestre</option>
+        <option value="aereo">Aéreo</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm">Notas</label>
+      <input name="notas" class="w-full px-3 py-2 border rounded" />
+    </div>
+  </div>
+
+
+  <div class="flex gap-3">
+    <button class="bg-indigo-600 text-white px-4 py-2 rounded">Reservar</button>
+    <button type="reset" class="px-4 py-2 border rounded">Limpiar</button>
+  </div>
+</form>
+
+
+</div>
+</div>
+</body>
+
+</html>
